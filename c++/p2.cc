@@ -7,15 +7,24 @@
  * By considering the terms in the Fibonacci sequence whose values do not exceed
  * four million, find the sum of the even-valued terms.
  *
- * g++ p2.cc && ./a.out
+ * clang++ p2.cc && ./a.out
  */
 
 #include <iostream>
 
 int FindSolution() {
-  // Continue this at home
+  int first = 0;
+  int second = 1;
 
-  return 0;
+  int sum = 0;
+  while (second <= 4000000) {
+  	int temp = first + second;
+  	first = second;
+  	second = temp;
+  	sum += second % 2 == 0 ? second : 0;
+  }
+
+  return sum;
 }
 
 int main(int argc, char** argv) {
