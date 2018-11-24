@@ -15,7 +15,7 @@
 #include <thread>
 #include <tuple>
 
-// All denomination available.
+// All denominations available.
 constexpr std::array<int, 8> denominations = {200, 100, 50, 20, 10, 5, 2, 1};
 
 // We are trying to hit this number.
