@@ -10,7 +10,7 @@
 fn find_solution() -> i32 {
   let mut sum = 0i32;
 
-  for (_,j) in (1..1000).enumerate() {
+  for j in 1..1000 {
       if j % 3 == 0 || j % 5 == 0 {
           sum += j;
       }
